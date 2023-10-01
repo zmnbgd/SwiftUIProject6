@@ -21,6 +21,8 @@ struct CreatingImplicitAnimations: View {
         .foregroundColor(.white)
         .clipShape(Circle())
         .scaleEffect(animationAmonut)
+        .blur(radius: (animationAmonut - 1) * 3)
+        .animation(.default, value: animationAmonut)
     }
 }
 
